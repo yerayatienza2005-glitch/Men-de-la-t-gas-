@@ -1,0 +1,1274 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Carta Tgas Las Galletas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Carta de la Cafetería Tgas Las Galletas: bocadillos, pepitos, arepas, hamburguesas, platos, batidos y zumos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+  /* Concepto: una sola carta en columna con barra fija (buscador + secciones).
+     Los precios se leen como el panel de una gasolinera: dígitos condensados.
+     La selección flota abajo y se abre como hoja. */
+  :root {
+    --bg: #f2f4f7;
+    --surface: #ffffff;
+    --ink: #0e1a2b;
+    --muted: #566176;
+    --line: #dfe3ea;
+    --accent: #c8102e;
+    --accent-ink: #ffffff;
+    --accent-soft: #fbe9ec;
+    --ok: #13744a;
+    --ok-soft: #e2f3ea;
+    --shadow: 0 1px 2px rgba(14, 26, 43, .06), 0 10px 28px rgba(14, 26, 43, .12);
+    --shadow-barra: 0 6px 18px rgba(14, 26, 43, .08);
+    --f-display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+    --f-body: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0a101a;
+      --surface: #121a27;
+      --ink: #edf0f5;
+      --muted: #9ba6b9;
+      --line: #243042;
+      --accent: #ff4f60;
+      --accent-ink: #0a101a;
+      --accent-soft: rgba(255, 79, 96, .15);
+      --ok: #46d395;
+      --ok-soft: rgba(70, 211, 149, .14);
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px rgba(0, 0, 0, .5);
+      --shadow-barra: 0 6px 18px rgba(0, 0, 0, .35);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0a101a;
+    --surface: #121a27;
+    --ink: #edf0f5;
+    --muted: #9ba6b9;
+    --line: #243042;
+    --accent: #ff4f60;
+    --accent-ink: #0a101a;
+    --accent-soft: rgba(255, 79, 96, .15);
+    --ok: #46d395;
+    --ok-soft: rgba(70, 211, 149, .14);
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px rgba(0, 0, 0, .5);
+    --shadow-barra: 0 6px 18px rgba(0, 0, 0, .35);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 16px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 10;
+    background: var(--surface);
+  }
+  svg {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  button, input { font: inherit; color: inherit; }
+  button { cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .wrap {
+    width: 100%;
+    max-width: 1040px;
+    margin-inline: auto;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  /* ---------- Cabecera ---------- */
+  .cabecera { background: var(--surface); }
+  .cabecera .wrap {
+    padding-block: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .eyebrow {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .marca {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 700;
+    font-size: clamp(46px, 12vw, 76px);
+    line-height: .9;
+    letter-spacing: -.005em;
+    text-wrap: balance;
+  }
+  .t { color: var(--accent); }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 30px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .estado { background: var(--ok-soft); color: var(--ok); }
+  .estado.cerrado { background: var(--accent-soft); color: var(--accent); }
+  .punto { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+  .horario { font-size: 14px; color: var(--muted); }
+  .carretera {
+    border: 1.5px solid var(--ink);
+    font-family: var(--f-display);
+    font-size: 16px;
+    letter-spacing: .04em;
+  }
+  .carretera svg { width: 16px; height: 16px; }
+  .acciones { display: flex; flex-wrap: wrap; gap: 8px; }
+  .accion {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .accion.icono { padding: 8px 12px; }
+  .tel { font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+
+  /* ---------- Barra fija ---------- */
+  .barra {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 5;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    transition: box-shadow .2s;
+  }
+  .barra.pegada { box-shadow: var(--shadow-barra); }
+  .barra .wrap { padding-block: 10px 0; display: flex; flex-direction: column; gap: 10px; }
+  .buscador { display: flex; gap: 8px; }
+  .campo {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--muted);
+  }
+  .campo:focus-within { border-color: var(--ink); }
+  .campo input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: var(--ink);
+    font-size: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .campo input::placeholder { color: var(--muted); }
+  .campo input::-webkit-search-decoration { -webkit-appearance: none; }
+  .filtro-btn {
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .filtro-btn.activo { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); }
+  .badge {
+    display: inline-grid;
+    place-items: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .chips {
+    position: relative;
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none;
+    min-height: 40px;
+    padding: 6px 15px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .chip:hover { color: var(--ink); border-color: var(--ink); }
+  .chip[aria-current="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+
+  /* ---------- Carta ---------- */
+  .carta { padding-block: 8px 24px; }
+  .aviso-filtro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    margin-top: 16px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    font-size: 15px;
+  }
+  .enlace {
+    min-height: 36px;
+    padding: 4px 2px;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .seccion { padding-top: 26px; }
+  .sec-cab { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; margin-bottom: 4px; }
+  .sec-cab h2 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .015em;
+    text-transform: uppercase;
+  }
+  .sec-nota { margin: 0; font-size: 15px; color: var(--muted); }
+  .platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+    column-gap: 40px;
+  }
+  .plato {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-block: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .plato-cab { display: flex; align-items: flex-start; gap: 12px; }
+  .plato-titulo { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 8px; padding-top: 2px; }
+  .plato-nombre { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.25; text-wrap: pretty; }
+  .casa {
+    font-family: var(--f-display);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .plato-desc { margin: 0; font-size: 15px; line-height: 1.4; color: var(--muted); text-wrap: pretty; }
+  .plato-alg { display: flex; flex-wrap: wrap; gap: 4px; margin: 0; padding: 0; list-style: none; }
+  .plato-alg li {
+    padding: 1px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 500;
+    color: var(--muted);
+  }
+  .precios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 160px));
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .precio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    min-height: 48px;
+    padding: 5px 6px 5px 11px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    text-align: left;
+    transition: border-color .15s, background-color .15s;
+  }
+  .plato-cab .precio { flex: none; }
+  .precio:hover { border-color: var(--ink); }
+  .precio.on { border-color: var(--accent); background: var(--accent-soft); }
+  .precio-txt { display: flex; flex-direction: column; line-height: 1.05; }
+  .precio-tam { font-size: 12.5px; font-weight: 500; color: var(--muted); }
+  .precio-val {
+    font-family: var(--f-display);
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .precio-mas {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--f-display);
+    font-size: 17px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .precio-mas svg { width: 16px; height: 16px; stroke-width: 2.6; }
+  .vacio {
+    margin: 28px 0 0;
+    padding: 28px 20px;
+    border: 1px dashed var(--line);
+    border-radius: 16px;
+    text-align: center;
+    color: var(--muted);
+  }
+
+  /* ---------- Pie ---------- */
+  .pie { margin-top: 28px; background: var(--surface); border-top: 1px solid var(--line); }
+  .pie .wrap {
+    padding-block: 30px calc(120px + env(safe-area-inset-bottom, 0px));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 24px 48px;
+  }
+  .pie-bloque { min-width: 0; }
+  .pie h2 {
+    margin: 0 0 8px;
+    font-family: var(--f-display);
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  .pie .marca-pie { font-size: 28px; letter-spacing: 0; text-transform: none; }
+  .pie p { margin: 0 0 8px; max-width: 65ch; font-size: 14.5px; color: var(--muted); }
+  .pie strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Selección flotante ---------- */
+  .bandeja {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    pointer-events: none;
+  }
+  .bandeja-btn {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 60px;
+    padding: 8px 14px 8px 12px;
+    border: 0;
+    border-radius: 16px;
+    background: var(--ink);
+    color: var(--surface);
+    box-shadow: var(--shadow);
+    text-align: left;
+  }
+  .bandeja-n {
+    display: grid;
+    place-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--f-display);
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .bandeja-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.15; }
+  .bandeja-tit { font-weight: 700; font-size: 16px; }
+  .bandeja-sub { font-size: 13px; opacity: .8; }
+  .bandeja-total {
+    font-family: var(--f-display);
+    font-size: 26px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .toast {
+    position: fixed;
+    left: max(16px, env(safe-area-inset-left, 0px));
+    right: max(16px, env(safe-area-inset-right, 0px));
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    z-index: 7;
+    width: fit-content;
+    max-width: 480px;
+    margin-inline: auto;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity .2s, transform .2s;
+  }
+  .toast.bajo { bottom: calc(16px + env(safe-area-inset-bottom, 0px)); }
+  .toast.ver { opacity: 1; transform: none; }
+
+  /* ---------- Hojas (diálogos) ---------- */
+  dialog.hoja {
+    width: 100%;
+    max-width: 560px;
+    max-height: min(86vh, 760px);
+    margin: auto auto 0;
+    padding: 0;
+    border: 0;
+    border-radius: 20px 20px 0 0;
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow);
+    overflow: auto;
+  }
+  dialog.hoja::backdrop { background: rgba(5, 8, 14, .55); }
+  .hoja-in {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-top: 18px;
+    padding-left: max(18px, env(safe-area-inset-left, 0px));
+    padding-right: max(18px, env(safe-area-inset-right, 0px));
+    padding-bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  }
+  .hoja-cab { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .hoja-cab h2 {
+    margin: 0;
+    font-family: var(--f-display);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+  }
+  .cerrar {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+  .hoja-texto { margin: 0; font-size: 16px; }
+  .hoja-nota { margin: 0; font-size: 14px; color: var(--muted); }
+  .hoja-acciones { display: flex; gap: 8px; }
+  .hoja-acciones .btn { flex: 1; }
+  .btn {
+    min-height: 48px;
+    padding: 10px 16px;
+    border: 1px solid var(--ink);
+    border-radius: 12px;
+    background: var(--ink);
+    color: var(--surface);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn.peligro { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn:disabled { opacity: .45; cursor: default; }
+  .sel-lista { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; }
+  .sel-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: 8px 12px;
+    padding-block: 10px;
+    border-top: 1px solid var(--line);
+  }
+  .sel-info { min-width: 0; display: flex; flex-direction: column; }
+  .sel-nombre { font-weight: 600; }
+  .sel-sub { font-size: 13.5px; color: var(--muted); }
+  .cantidad { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: 12px; }
+  .cantidad button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 11px;
+    background: transparent;
+  }
+  .cantidad output { min-width: 22px; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .sel-precio {
+    min-width: 64px;
+    text-align: right;
+    font-family: var(--f-display);
+    font-size: 20px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+  .sel-total {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 2px solid var(--ink);
+    font-weight: 700;
+  }
+  .sel-total strong {
+    font-family: var(--f-display);
+    font-size: 32px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .confirmar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    background: var(--accent-soft);
+    font-weight: 600;
+  }
+  .confirmar-acc { display: flex; gap: 8px; }
+  .confirmar-acc .btn { flex: 1; }
+  .alg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .alg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    min-height: 48px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+  }
+  .alg .check {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid var(--line);
+    border-radius: 6px;
+  }
+  .alg .check svg { width: 14px; height: 14px; stroke-width: 3; opacity: 0; }
+  .alg[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
+  .alg[aria-pressed="true"] .check { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+  .alg[aria-pressed="true"] .check svg { opacity: 1; }
+
+  @media (min-width: 720px) {
+    .cabecera .wrap { padding-block: 32px 24px; }
+    .sec-cab h2 { font-size: 40px; }
+    dialog.hoja { margin: auto; border-radius: 20px; }
+  }
+  @media (min-width: 900px) {
+    .chips { flex-wrap: wrap; overflow: visible; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+
+<header class="cabecera">
+  <div class="wrap">
+    <p class="eyebrow">Cafetería</p>
+    <h1 class="marca"><span class="t">T</span>gas Las Galletas</h1>
+    <div class="meta">
+      <span class="pill estado" id="estado" hidden><span class="punto" aria-hidden="true"></span><span id="estado-texto">Abierto ahora</span></span>
+      <span class="horario">Todos los días · 06:00–01:00</span>
+      <span class="pill carretera"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3 5 21M16 3l3 18M12 4v3M12 11v3M12 18v2"/></svg>TF-66 · km 11,1</span>
+    </div>
+    <div class="acciones">
+      <a class="accion" href="tel:+34922785792"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span class="tel" id="tel-texto">922 785 792</span></a>
+      <button class="accion icono" type="button" id="copiar-tel" aria-label="Copiar el número de teléfono"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h3"/></svg></button>
+      <a class="accion" href="https://www.google.com/maps/search/?api=1&amp;query=Tgas%20Las%20Galletas%20TF-66" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<div class="barra" id="barra">
+  <div class="wrap">
+    <div class="buscador">
+      <label class="campo" for="buscar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span class="sr">Buscar en la carta</span>
+        <input id="buscar" type="search" placeholder="Busca un plato" autocomplete="off" enterkeyhint="search">
+      </label>
+      <button class="filtro-btn" id="filtro-btn" type="button" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6 7.5V19l-4 1.5v-8z"/></svg>
+        <span>Alérgenos</span>
+        <span class="badge" id="filtro-n" hidden>0</span>
+      </button>
+    </div>
+    <nav class="chips" id="chips" aria-label="Secciones de la carta"></nav>
+  </div>
+</div>
+
+<main class="wrap carta" id="carta">
+  <div class="aviso-filtro" id="aviso-filtro" hidden>
+    <span id="aviso-texto"></span>
+    <button type="button" class="enlace" id="quitar-filtro">Quitar filtro</button>
+  </div>
+  <p class="vacio" id="vacio" hidden></p>
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <section class="pie-bloque" aria-labelledby="h-alergenos">
+      <h2 id="h-alergenos">Información sobre alérgenos</h2>
+      <p>En este establecimiento se elaboran alimentos con los alérgenos recogidos en el Anexo II del Reglamento (UE) 1169/2011 sobre la información alimentaria facilitada al consumidor, por lo que cualquier plato, de la carta o fuera de ella, contiene o puede contener trazas de cereales con gluten, sésamo, soja, huevos, leche, crustáceos, moluscos, cacahuetes, frutos de cáscara, altramuces, mostaza, apio, sulfitos o productos derivados.</p>
+      <p><strong>Si es sensible a alguno de estos alérgenos, consulte a nuestro personal.</strong></p>
+    </section>
+    <section class="pie-bloque" aria-labelledby="h-local">
+      <h2 id="h-local" class="marca-pie"><span class="t">T</span>gas Las Galletas</h2>
+      <p>Carretera General TF-66, Guaza-Las Galletas, km 11,1<br>CP 38632 Fraile, Santa Cruz de Tenerife</p>
+      <p>Abierto todos los días de 06:00 a 01:00</p>
+      <p>Tel. 922 785 792</p>
+    </section>
+  </div>
+</footer>
+
+<div class="bandeja" id="bandeja" hidden>
+  <button type="button" class="bandeja-btn" id="bandeja-btn" aria-haspopup="dialog">
+    <span class="bandeja-n" id="bandeja-n">0</span>
+    <span class="bandeja-txt"><span class="bandeja-tit">Tu selección</span><span class="bandeja-sub" id="bandeja-sub">Toca para ver la lista</span></span>
+    <span class="bandeja-total" id="bandeja-total">0,00 €</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+</div>
+<div class="toast bajo" id="toast" role="status" aria-live="polite"></div>
+
+<dialog class="hoja" id="dlg-sel" aria-labelledby="sel-titulo">
+  <div class="hoja-in">
+    <div class="hoja-cab">
+      <h2 id="sel-titulo">Tu selección</h2>
+      <button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p class="hoja-texto" id="sel-vacia" hidden>Todavía no has añadido nada. Pulsa el precio de un plato para sumarlo aquí.</p>
+    <ul class="sel-lista" id="sel-lista"></ul>
+    <div class="sel-total" id="sel-total-fila"><span>Total</span><strong id="sel-total">0,00 €</strong></div>
+    <p class="hoja-nota">Esta lista no envía ningún pedido. Enséñasela al camarero cuando vayas a pedir.</p>
+    <div class="confirmar" id="confirmar" hidden>
+      <span>¿Vaciar toda la lista?</span>
+      <div class="confirmar-acc">
+        <button type="button" class="btn peligro" id="vaciar-si">Sí, vaciar</button>
+        <button type="button" class="btn ghost" id="vaciar-no">Cancelar</button>
+      </div>
+    </div>
+    <div class="hoja-acciones">
+      <button type="button" class="btn ghost" id="vaciar">Vaciar lista</button>
+      <button type="button" class="btn" data-cerrar>Seguir mirando</button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="hoja" id="dlg-alg" aria-labelledby="alg-titulo">
+  <div class="hoja-in">
+    <div class="hoja-cab">
+      <h2 id="alg-titulo">Alérgenos</h2>
+      <button type="button" class="cerrar" data-cerrar aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p class="hoja-texto">Marca lo que no puedes tomar y ocultaremos los platos que lo llevan como ingrediente.</p>
+    <div class="alg-grid" id="alg-grid"></div>
+    <p class="hoja-nota">Todos los platos pueden contener trazas. Si tienes una alergia, consulta siempre al personal.</p>
+    <div class="hoja-acciones">
+      <button type="button" class="btn ghost" id="alg-limpiar">Quitar todo</button>
+      <button type="button" class="btn" id="alg-ver" data-cerrar>Ver platos</button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===== Alérgenos (orden del Reglamento UE 1169/2011) ===== */
+  var ALERGENOS = ['', 'Gluten', 'Crustáceos', 'Huevos', 'Pescado', 'Cacahuetes', 'Soja', 'Lácteos',
+    'Frutos de cáscara', 'Apio', 'Mostaza', 'Sésamo', 'Sulfitos', 'Altramuces', 'Moluscos'];
+
+  /* ===== CARTA =====
+     Cada plato: [nombre, descripción, precios (uno por tamaño, null si no hay), alérgenos]
+     Para cambiar un precio, edítalo aquí. */
+  var CARTA = [
+    { id: 'bocadillos', titulo: 'Bocadillos', tamanos: ['Pulguita', 'Bocata'], platos: [
+      ['Jamón cocido', '', [2.90, 3.80], [1]],
+      ['Mixto', 'Jamón cocido y queso', [2.90, 4.00], [1, 7]],
+      ['Queso amarillo', '', [2.90, 3.80], [1, 7]],
+      ['Queso blanco', '', [3.00, 4.00], [1, 7]],
+      ['Queso blanco y dulce de guayaba', '', [3.00, 4.10], [1, 7]],
+      ['Mortadela', '', [2.90, 3.80], [1]],
+      ['Salami', '', [2.90, 3.80], [1, 6]],
+      ['Salchichón', '', [2.90, 3.80], [1]],
+      ['Chorizo Revilla', '', [2.90, 3.80], [1]],
+      ['Pata asada', '', [3.00, 4.50], [1]],
+      ['Pata asada y queso blanco', '', [3.10, 4.70], [1, 7, 12]],
+      ['Jamón serrano', '', [3.10, 4.50], [1]],
+      ['Jamón serrano y queso blanco', '', [3.20, 4.70], [1, 7]],
+      ['Jamón serrano, queso manchego y tomate', '', [3.20, 4.80], [1, 7]]
+    ]},
+    { id: 'pepitos', titulo: 'Pepitos', tamanos: ['Pulguita', 'Bocata'], platos: [
+      ['Lomo', 'Ensalada y queso', [3.10, 4.50], [1, 7]],
+      ['Pechuga de pollo', 'Ensalada y queso', [3.10, 4.50], [1, 7]],
+      ['Pollo mechado', 'Ensalada y queso', [3.10, 4.90], [1, 3, 7]],
+      ['Carne mechada', 'Ensalada y queso', [3.10, 4.90], [1, 3, 7]],
+      ['Bacon', 'Ensalada y queso', [3.10, 4.50], [1, 7]],
+      ['Tortilla española', '', [3.00, 4.00], [1, 3]],
+      ['Tortilla francesa', '', [3.00, 3.80], [1, 3]],
+      ['Bistec de ternera', 'Ensalada y queso', [3.20, 4.90], [1, 3, 7]],
+      ['Los Pozos', 'Bistec de cerdo, ensalada, queso y mojo rojo', [3.30, 5.00], [1, 7, 12]],
+      ['Tgas Las Galletas', 'Lomo, bacon, almogrote, queso y ensalada', [3.30, 5.00], [1, 6, 7]]
+    ]},
+    { id: 'sandwiches', titulo: 'Sándwiches', platos: [
+      ['Queso', '', [2.50], [1, 7]],
+      ['Jamón', '', [2.50], [1]],
+      ['Mixto', 'Jamón y queso', [3.00], [1, 7]],
+      ['Atún', '', [3.50], [1, 4]],
+      ['Pollo mechado', 'Ensalada y queso', [3.90], [1, 3, 7]],
+      ['Americano', 'Ensalada, huevo, bacon, jamón y queso', [3.90], [1, 3, 6, 7]]
+    ]},
+    { id: 'croissants', titulo: 'Croissants', platos: [
+      ['Mixto', 'Jamón y queso', [3.90], [1, 3, 6, 7, 8]],
+      ['Americano', 'Ensalada, queso, jamón, bacon y huevo', [4.80], [1, 3, 6, 7, 8]],
+      ['Pollo mechado', 'Ensalada y queso', [4.90], [1, 3, 6, 7, 8]],
+      ['Carne mechada', 'Ensalada y queso', [4.90], [1, 3, 6, 7, 8]],
+      ['Lomo', '', [4.90], [1, 3, 6, 7, 8]],
+      ['Tgas Las Galletas', 'Ensalada, almogrote, queso, bacon y lomo', [5.00], [1, 3, 6, 7, 8]]
+    ]},
+    { id: 'hamburguesas', titulo: 'Hamburguesas', platos: [
+      ['Normal', 'Carne de vacuno, ensalada y queso', [5.00], [1, 6, 7]],
+      ['Americana', 'Carne de vacuno, ensalada, huevo, bacon, jamón y queso', [5.50], [1, 3, 6, 7]],
+      ['Tgas Las Galletas', 'Carne de vacuno, ensalada, queso, almogrote y jamón', [5.70], [1, 6, 7]],
+      ['Pollo empanado', 'Pechuga empanada, queso y ensalada', [5.00], [1, 7]]
+    ]},
+    { id: 'arepas', titulo: 'Arepas', platos: [
+      ['Jamón y queso', '', [3.80], [7]],
+      ['Queso blanco', '', [3.80], [7]],
+      ['Jamón y queso blanco', '', [4.00], [7]],
+      ['Queso blanco y dulce de guayaba', '', [4.00], [7]],
+      ['Pollo mechado', '', [4.10], [3, 7]],
+      ['Carne mechada', '', [4.10], [3, 7]],
+      ['Salpicón de atún', '', [3.90], [4]],
+      ['Pata y queso blanco', '', [4.00], [7, 12]],
+      ['Reina pepiada', '', [4.20], [3]],
+      ['Tgas Las Galletas', 'Jamón, almogrote y tomate', [4.10], [7]],
+      ['Perico', '', [4.00], [3]]
+    ]},
+    { id: 'entrantes', titulo: 'Entrantes', tamanos: ['Tapa', '½ ración', 'Ración'], platos: [
+      ['Almogrote', '', [null, null, 3.50], [7]],
+      ['Tortilla', '', [null, null, 4.50], [3]],
+      ['Ensaladilla', '', [2.00, 3.50, 6.00], [3, 4, 7]],
+      ['Croquetas de pollo', '', [null, 5.00, 9.50], [1, 7]],
+      ['Croquetas de pescado', '', [null, 5.00, 9.50], [1, 4, 7]],
+      ['Salpicón de atún', '', [null, 6.00, 10.50], [4, 12]],
+      ['Pulpo a la vinagreta', '', [3.50, 7.00, 12.00], [12, 14]],
+      ['Pata asada', '', [null, 5.00, 8.50], [12]],
+      ['Queso blanco', '', [null, 5.50, 9.50], [7]],
+      ['Queso asado', '', [null, 5.50, 9.80], [7]]
+    ]},
+    { id: 'papas', titulo: 'Papas locas', tamanos: ['½ ración', 'Ración'], platos: [
+      ['Papas fritas', '', [2.50, 3.70], []],
+      ['Papas locas', 'Jamón, queso y tres salsas', [null, 6.80], [3, 7, 10]],
+      ['Papas locas de pollo', 'Pollo mechado, jamón, queso y tres salsas', [null, 8.00], [3, 7, 10]],
+      ['Papas locas especial', 'Pollo y carne mechada, jamón, queso y tres salsas', [null, 8.80], [3, 7, 10]]
+    ]},
+    { id: 'ensaladas', titulo: 'Ensaladas', platos: [
+      ['Mixta', 'Lechuga, tomate, zanahoria, cebolla, pepino, pimiento morrón y maíz', [6.50], []],
+      ['César', 'Lechuga, picatostes, queso parmesano, pollo, aceitunas, tomate cherry y salsa', [8.90], [1, 3, 4, 7, 10]],
+      ['Tgas Las Galletas', 'Lechuga, tomate, zanahoria, cebolla, pepino, huevo, atún, fruta en conserva y maíz', [8.80], [3, 4]]
+    ]},
+    { id: 'carnes', titulo: 'Carnes', tamanos: ['½ ración', 'Ración'], platos: [
+      ['Pechuga de pollo a la plancha', '', [null, 10.50], []],
+      ['Pechuga de pollo empanada', '', [null, 11.50], [1, 3]],
+      ['Bistec de cerdo a la plancha', '', [null, 10.50], []],
+      ['Bistec de ternera a la plancha', '', [null, 11.50], []],
+      ['Carne fiesta', '', [5.80, 10.50], [12]],
+      ['Carne de cabra', '', [8.00, 13.50], [12]]
+    ]},
+    { id: 'pescados', titulo: 'Pescados', tamanos: ['½ ración', 'Ración'], platos: [
+      ['Churros de pescado', '', [5.80, 10.50], [1, 3, 4]],
+      ['Pescado salado', '', [8.10, 12.90], [4]],
+      ['Calamares a la romana', '', [null, 10.80], [1, 3, 14]],
+      ['Merluza a la plancha', '', [null, 11.50], [4]],
+      ['Chocos a la plancha', '', [null, 11.50], [12, 14]],
+      ['Pulpo guisado', '', [null, 14.50], [12, 14]]
+    ]},
+    { id: 'batidos', titulo: 'Batidos naturales', corto: 'Batidos', nota: 'Con una pieza de fruta', platos: [
+      ['Plátano', '', [4.00], [7]],
+      ['Papaya', '', [4.50], [7]],
+      ['Melón', '', [4.50], [7]],
+      ['Fresa', '', [4.50], [7]],
+      ['Frutas del bosque', '', [4.50], [7]],
+      ['Piña', '', [4.50], [7]],
+      ['Mango', '', [4.50], [7]],
+      ['Aguacate', '', [4.50], [7]],
+      ['Multifrutas', '', [4.80], [7]]
+    ]},
+    { id: 'zumos', titulo: 'Zumos naturales', corto: 'Zumos', tamanos: ['Pequeño', 'Grande'], platos: [
+      ['Naranja', '', [1.80, 3.50], []],
+      ['Papaya y naranja', '', [null, 4.50], []]
+    ]},
+    { id: 'postres', titulo: 'Postres', platos: [
+      ['Postres variados', 'Precio por unidad', [4.50], [1, 3, 7]]
+    ]},
+    { id: 'extras', titulo: 'Extras', platos: [
+      ['Extras', 'Precio por unidad', [1.00], []],
+      ['Extra de aguacate', 'Precio por unidad', [1.20], []]
+    ]}
+  ];
+
+  var ICON = {
+    mas: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
+    menos: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg>',
+    check: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>'
+  };
+
+  var euro = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' });
+  function fmt(cent) { return euro.format(cent / 100); }
+  function aCent(p) { return Math.round(p * 100); }
+  function norm(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var $ = function (id) { return document.getElementById(id); };
+  var carta = $('carta'), chipsNav = $('chips'), vacio = $('vacio'), barra = $('barra');
+  var secciones = [], platos = [], info = new Map(), botonesPor = new Map();
+
+  /* ===== Construir la carta ===== */
+  CARTA.forEach(function (sec) {
+    var el = document.createElement('section');
+    el.className = 'seccion';
+    el.id = 'sec-' + sec.id;
+    el.setAttribute('aria-labelledby', 'h-' + sec.id);
+    el.innerHTML = '<div class="sec-cab"><h2 id="h-' + sec.id + '">' + sec.titulo + '</h2>' +
+      (sec.nota ? '<p class="sec-nota">' + sec.nota + '</p>' : '') + '</div><div class="platos"></div>';
+    var grid = el.querySelector('.platos');
+    var reg = { id: sec.id, el: el, chip: null, platos: [] };
+
+    sec.platos.forEach(function (fila) {
+      var nombre = fila[0], desc = fila[1], precios = fila[2], alg = fila[3];
+      var opciones = [];
+      precios.forEach(function (p, i) {
+        if (p != null) opciones.push({ tam: sec.tamanos ? sec.tamanos[i] : '', cent: aCent(p) });
+      });
+      var botones = opciones.map(function (o) {
+        var clave = sec.id + '|' + nombre + '|' + o.tam;
+        info.set(clave, { nombre: nombre, seccion: sec.titulo, tam: o.tam, cent: o.cent });
+        var etiqueta = 'Añadir ' + nombre + (o.tam ? ', ' + o.tam.toLowerCase() : '') + ', ' + fmt(o.cent);
+        return '<button class="precio" type="button" data-clave="' + clave + '" aria-label="' + etiqueta + '">' +
+          '<span class="precio-txt">' + (o.tam ? '<span class="precio-tam">' + o.tam + '</span>' : '') +
+          '<span class="precio-val">' + fmt(o.cent) + '</span></span>' +
+          '<span class="precio-mas" aria-hidden="true">' + ICON.mas + '</span></button>';
+      });
+      var enCabecera = !sec.tamanos && botones.length === 1;
+      var art = document.createElement('article');
+      art.className = 'plato';
+      art.innerHTML =
+        '<div class="plato-cab"><div class="plato-titulo"><h3 class="plato-nombre">' + nombre + '</h3>' +
+        (nombre === 'Tgas Las Galletas' ? '<span class="casa">De la casa</span>' : '') + '</div>' +
+        (enCabecera ? botones[0] : '') + '</div>' +
+        (desc ? '<p class="plato-desc">' + desc + '</p>' : '') +
+        (alg.length ? '<ul class="plato-alg" aria-label="Alérgenos">' +
+          alg.map(function (a) { return '<li>' + ALERGENOS[a] + '</li>'; }).join('') + '</ul>' : '') +
+        (enCabecera ? '' : '<div class="precios">' + botones.join('') + '</div>');
+      grid.appendChild(art);
+
+      Array.prototype.forEach.call(art.querySelectorAll('.precio'), function (b) {
+        var k = b.getAttribute('data-clave');
+        b.setAttribute('data-base', b.getAttribute('aria-label'));
+        if (!botonesPor.has(k)) botonesPor.set(k, []);
+        botonesPor.get(k).push(b);
+        b.addEventListener('click', function () { anadir(k); });
+      });
+
+      var p = { el: art, alg: alg, texto: norm(nombre + ' ' + desc + ' ' + sec.titulo) };
+      reg.platos.push(p);
+      platos.push(p);
+    });
+
+    carta.insertBefore(el, vacio);
+
+    var chip = document.createElement('button');
+    chip.type = 'button';
+    chip.className = 'chip';
+    chip.textContent = sec.corto || sec.titulo;
+    chip.addEventListener('click', function () { irA(reg); });
+    chipsNav.appendChild(chip);
+    reg.chip = chip;
+    secciones.push(reg);
+  });
+
+  /* ===== Estado guardado en este navegador ===== */
+  var CLAVE_SEL = 'tgas-carta-seleccion', CLAVE_ALG = 'tgas-carta-alergenos';
+  var sel = new Map(), filtro = new Set(), busqueda = '';
+  try {
+    (JSON.parse(localStorage.getItem(CLAVE_SEL) || '[]') || []).forEach(function (e) {
+      var n = Math.min(99, e[1] | 0);
+      if (info.has(e[0]) && n > 0) sel.set(e[0], n);
+    });
+  } catch (e) {}
+  try {
+    (JSON.parse(localStorage.getItem(CLAVE_ALG) || '[]') || []).forEach(function (a) {
+      if (a >= 1 && a <= 14) filtro.add(a);
+    });
+  } catch (e) {}
+  function guardarSel() { try { localStorage.setItem(CLAVE_SEL, JSON.stringify(Array.from(sel))); } catch (e) {} }
+  function guardarAlg() { try { localStorage.setItem(CLAVE_ALG, JSON.stringify(Array.from(filtro))); } catch (e) {} }
+
+  /* ===== Buscar y filtrar ===== */
+  var avisoFiltro = $('aviso-filtro'), avisoTexto = $('aviso-texto'), filtroN = $('filtro-n'), filtroBtn = $('filtro-btn'), algVer = $('alg-ver');
+
+  function aplicar() {
+    var palabras = norm(busqueda.trim()).split(/\s+/).filter(Boolean);
+    var visibles = 0, ocultosAlg = 0;
+    secciones.forEach(function (s) {
+      var n = 0;
+      s.platos.forEach(function (p) {
+        var okTexto = palabras.every(function (w) { return p.texto.indexOf(w) !== -1; });
+        var okAlg = !p.alg.some(function (a) { return filtro.has(a); });
+        if (!okAlg) ocultosAlg++;
+        var ver = okTexto && okAlg;
+        p.el.hidden = !ver;
+        if (ver) n++;
+      });
+      s.el.hidden = n === 0;
+      s.chip.hidden = n === 0;
+      visibles += n;
+    });
+
+    if (filtro.size) {
+      var nombres = Array.from(filtro).sort(function (a, b) { return a - b; })
+        .map(function (a) { return ALERGENOS[a].toLowerCase(); });
+      avisoTexto.textContent = 'Ocultando ' + ocultosAlg + (ocultosAlg === 1 ? ' plato que lleva ' : ' platos que llevan ') +
+        nombres.join(', ') + '.';
+    }
+    avisoFiltro.hidden = filtro.size === 0;
+    filtroN.hidden = filtro.size === 0;
+    filtroN.textContent = filtro.size;
+    filtroBtn.classList.toggle('activo', filtro.size > 0);
+    algVer.textContent = visibles === 1 ? 'Ver 1 plato' : 'Ver ' + visibles + ' platos';
+
+    vacio.hidden = visibles > 0;
+    if (!visibles) {
+      vacio.textContent = palabras.length
+        ? 'No hay platos que coincidan con «' + busqueda.trim() + '»' + (filtro.size ? ' con el filtro de alérgenos activo.' : '.')
+        : 'Ningún plato cumple el filtro de alérgenos.';
+    }
+    programarSpy();
+  }
+
+  var buscar = $('buscar');
+  buscar.addEventListener('input', function () {
+    busqueda = buscar.value;
+    aplicar();
+    var tope = carta.getBoundingClientRect().top + window.scrollY - barra.offsetHeight;
+    if (window.scrollY > tope) window.scrollTo(0, Math.max(0, tope));
+  });
+
+  /* ===== Alérgenos ===== */
+  var algGrid = $('alg-grid'), algBotones = [];
+  for (var a = 1; a <= 14; a++) {
+    (function (n) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'alg';
+      b.setAttribute('aria-pressed', filtro.has(n) ? 'true' : 'false');
+      b.innerHTML = '<span>' + ALERGENOS[n] + '</span><span class="check" aria-hidden="true">' + ICON.check + '</span>';
+      b.addEventListener('click', function () {
+        if (filtro.has(n)) filtro.delete(n); else filtro.add(n);
+        b.setAttribute('aria-pressed', filtro.has(n) ? 'true' : 'false');
+        guardarAlg();
+        aplicar();
+      });
+      algGrid.appendChild(b);
+      algBotones.push(b);
+    })(a);
+  }
+  function quitarFiltro() {
+    filtro.clear();
+    algBotones.forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+    guardarAlg();
+    aplicar();
+  }
+  $('alg-limpiar').addEventListener('click', quitarFiltro);
+  $('quitar-filtro').addEventListener('click', quitarFiltro);
+
+  /* ===== Selección ===== */
+  var bandeja = $('bandeja'), bandejaN = $('bandeja-n'), bandejaSub = $('bandeja-sub'), bandejaTotal = $('bandeja-total'), bandejaBtn = $('bandeja-btn');
+  var selLista = $('sel-lista'), selVacia = $('sel-vacia'), selTotalFila = $('sel-total-fila'), selTotal = $('sel-total');
+  var dlgSel = $('dlg-sel'), dlgAlg = $('dlg-alg'), toastEl = $('toast'), confirmar = $('confirmar'), vaciarBtn = $('vaciar');
+
+  function totales() {
+    var t = 0, n = 0;
+    sel.forEach(function (q, k) { t += info.get(k).cent * q; n += q; });
+    return { t: t, n: n };
+  }
+  function anadir(k) {
+    sel.set(k, Math.min(99, (sel.get(k) || 0) + 1));
+    cambio();
+    var i = info.get(k);
+    toast('Añadido: ' + i.nombre + (i.tam ? ' · ' + i.tam : ''));
+  }
+  function cambiar(k, d) {
+    var q = (sel.get(k) || 0) + d;
+    if (q <= 0) sel.delete(k); else sel.set(k, Math.min(99, q));
+    cambio();
+  }
+  function cambio() {
+    guardarSel();
+    pintarBotones();
+    pintarBandeja();
+    if (dlgSel.open) pintarLista();
+  }
+  function pintarBotones() {
+    botonesPor.forEach(function (lista, k) {
+      var q = sel.get(k) || 0;
+      lista.forEach(function (b) {
+        var marcado = b.classList.contains('on');
+        if (marcado === (q > 0) && b.getAttribute('data-q') === String(q)) return;
+        b.classList.toggle('on', q > 0);
+        b.setAttribute('data-q', String(q));
+        b.querySelector('.precio-mas').innerHTML = q > 0 ? String(q) : ICON.mas;
+        b.setAttribute('aria-label', b.getAttribute('data-base') + (q > 0 ? '. En tu selección: ' + q : ''));
+      });
+    });
+  }
+  function pintarBandeja() {
+    var r = totales();
+    bandeja.hidden = r.n === 0;
+    bandejaN.textContent = r.n;
+    bandejaSub.textContent = r.n === 1 ? '1 producto · ver lista' : r.n + ' productos · ver lista';
+    bandejaTotal.textContent = fmt(r.t);
+    bandejaBtn.setAttribute('aria-label', 'Ver tu selección: ' + (r.n === 1 ? '1 producto' : r.n + ' productos') + ', ' + fmt(r.t));
+    toastEl.classList.toggle('bajo', r.n === 0);
+  }
+  function pintarLista() {
+    var act = document.activeElement, foco = null;
+    if (act && act.getAttribute && act.getAttribute('data-k')) foco = { k: act.getAttribute('data-k'), acc: act.getAttribute('data-acc') };
+    selLista.textContent = '';
+    var vacia = sel.size === 0;
+    selVacia.hidden = !vacia;
+    selTotalFila.hidden = vacia;
+    vaciarBtn.disabled = vacia;
+    if (vacia) confirmar.hidden = true;
+    sel.forEach(function (q, k) {
+      var i = info.get(k);
+      var li = document.createElement('li');
+      li.className = 'sel-item';
+      li.innerHTML = '<div class="sel-info"><span class="sel-nombre"></span><span class="sel-sub"></span></div>' +
+        '<div class="cantidad"><button type="button" data-acc="menos">' + ICON.menos + '</button><output></output>' +
+        '<button type="button" data-acc="mas">' + ICON.mas + '</button></div><span class="sel-precio"></span>';
+      li.querySelector('.sel-nombre').textContent = i.nombre;
+      li.querySelector('.sel-sub').textContent = i.seccion + (i.tam ? ' · ' + i.tam : '') + ' · ' + fmt(i.cent);
+      li.querySelector('output').textContent = q;
+      li.querySelector('.sel-precio').textContent = fmt(i.cent * q);
+      Array.prototype.forEach.call(li.querySelectorAll('button'), function (b) {
+        b.setAttribute('data-k', k);
+        var menos = b.getAttribute('data-acc') === 'menos';
+        b.setAttribute('aria-label', (menos ? 'Quitar uno: ' : 'Añadir uno: ') + i.nombre + (i.tam ? ', ' + i.tam.toLowerCase() : ''));
+      });
+      selLista.appendChild(li);
+    });
+    selTotal.textContent = fmt(totales().t);
+    if (foco) {
+      var nuevo = Array.prototype.find.call(selLista.querySelectorAll('button'), function (b) {
+        return b.getAttribute('data-k') === foco.k && b.getAttribute('data-acc') === foco.acc;
+      });
+      if (nuevo) nuevo.focus(); else dlgSel.querySelector('.cerrar').focus();
+    }
+  }
+  selLista.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-k]');
+    if (!b) return;
+    cambiar(b.getAttribute('data-k'), b.getAttribute('data-acc') === 'menos' ? -1 : 1);
+  });
+
+  var tt = 0;
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('ver');
+    clearTimeout(tt);
+    tt = setTimeout(function () { toastEl.classList.remove('ver'); }, 1600);
+  }
+
+  /* ===== Hojas ===== */
+  function abrir(d) {
+    if (typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open', '');
+  }
+  function cerrar(d) {
+    if (typeof d.close === 'function') d.close(); else d.removeAttribute('open');
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-cerrar]'), function (b) {
+    b.addEventListener('click', function () { cerrar(b.closest('dialog')); });
+  });
+  [dlgSel, dlgAlg].forEach(function (d) {
+    d.addEventListener('click', function (e) { if (e.target === d) cerrar(d); });
+  });
+  bandejaBtn.addEventListener('click', function () { pintarLista(); abrir(dlgSel); });
+  filtroBtn.addEventListener('click', function () { abrir(dlgAlg); });
+  vaciarBtn.addEventListener('click', function () { confirmar.hidden = false; $('vaciar-si').focus(); });
+  $('vaciar-no').addEventListener('click', function () { confirmar.hidden = true; vaciarBtn.focus(); });
+  $('vaciar-si').addEventListener('click', function () {
+    sel.clear();
+    confirmar.hidden = true;
+    cambio();
+    toast('Lista vaciada');
+  });
+  dlgSel.addEventListener('close', function () { confirmar.hidden = true; });
+
+  /* ===== Navegación por secciones ===== */
+  var activo = null, rafSpy = 0;
+  function irA(s) {
+    var top = parseFloat(getComputedStyle(barra).top) || 0;
+    var y = s.el.getBoundingClientRect().top + window.scrollY - barra.offsetHeight - top - 4;
+    window.scrollTo({ top: Math.max(0, y), behavior: reduceMotion ? 'auto' : 'smooth' });
+    marcar(s);
+  }
+  function marcar(s) {
+    if (s === activo) return;
+    if (activo) activo.chip.removeAttribute('aria-current');
+    activo = s;
+    if (!s) return;
+    s.chip.setAttribute('aria-current', 'true');
+    if (chipsNav.scrollWidth > chipsNav.clientWidth) {
+      var destino = s.chip.offsetLeft - (chipsNav.clientWidth - s.chip.offsetWidth) / 2;
+      chipsNav.scrollTo({ left: Math.max(0, destino), behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+  }
+  function spy() {
+    rafSpy = 0;
+    barra.classList.toggle('pegada', barra.getBoundingClientRect().top <= (parseFloat(getComputedStyle(barra).top) || 0) + 0.5 && window.scrollY > 0);
+    var limite = barra.getBoundingClientRect().bottom + 40;
+    var vis = secciones.filter(function (s) { return !s.el.hidden; });
+    var actual = vis[0] || null;
+    for (var i = 0; i < vis.length; i++) {
+      if (vis[i].el.getBoundingClientRect().top <= limite) actual = vis[i]; else break;
+    }
+    if (vis.length && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) actual = vis[vis.length - 1];
+    marcar(actual);
+  }
+  function programarSpy() { if (!rafSpy) rafSpy = requestAnimationFrame(spy); }
+  window.addEventListener('scroll', programarSpy, { passive: true });
+  window.addEventListener('resize', programarSpy);
+
+  /* ===== Abierto / cerrado (hora de Canarias) ===== */
+  var estado = $('estado'), estadoTexto = $('estado-texto');
+  function minutosCanarias() {
+    try {
+      var partes = new Intl.DateTimeFormat('es-ES', { timeZone: 'Atlantic/Canary', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(new Date());
+      var h = 0, m = 0;
+      partes.forEach(function (p) { if (p.type === 'hour') h = +p.value; if (p.type === 'minute') m = +p.value; });
+      return (h % 24) * 60 + m;
+    } catch (e) {
+      var d = new Date();
+      return d.getHours() * 60 + d.getMinutes();
+    }
+  }
+  function pintarEstado() {
+    var min = minutosCanarias();
+    var abierto = min >= 360 || min < 60;
+    estado.classList.toggle('cerrado', !abierto);
+    estadoTexto.textContent = abierto ? 'Abierto ahora' : 'Cerrado · abre a las 06:00';
+    estado.hidden = false;
+  }
+  pintarEstado();
+  setInterval(pintarEstado, 60000);
+
+  /* ===== Copiar teléfono ===== */
+  $('copiar-tel').addEventListener('click', function () {
+    var telTexto = $('tel-texto');
+    function seleccionar() {
+      var r = document.createRange();
+      r.selectNodeContents(telTexto);
+      var s = window.getSelection();
+      s.removeAllRanges();
+      s.addRange(r);
+      toast('Número seleccionado, ya puedes copiarlo');
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText('922 785 792').then(function () { toast('Número copiado'); }, seleccionar);
+    } else {
+      seleccionar();
+    }
+  });
+
+  /* ===== Inicio ===== */
+  aplicar();
+  pintarBotones();
+  pintarBandeja();
+  spy();
+})();
+</script>
+
+</body></html>
